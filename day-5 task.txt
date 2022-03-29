@@ -1,0 +1,222 @@
+Do the below programs in anonymous function & IIFE
+
+a.Print odd numbers in an array
+
+// IIF - Immediately Invoked Function
+
+(function(){
+    console.log([1,3,5,7,9])
+})();
+
+//OUTPUT
+[ 1, 3, 5, 7, 9 ]
+
+
+C.Sum of all numbers in an array
+
+var arr=[1,2,3,4,5,6,7,8]
+var diff=arr.reduce(function(a,b){
+    return a+b;
+})
+console.log(diff)
+
+
+b.Convert all the strings to title caps in a string array
+
+//Anonymous function
+
+var name="kamaraj "
+ let titlecpas = (function(name){
+    var caps=name.charAt(0).toUpperCase() +
+    name.substr(1).toLowerCase();
+    
+    
+    return caps;
+});
+console.log(titlecpas(name))
+
+c.Sum of all numbers in an array
+
+//Anonymous function
+
+var arr=[1,2,3,4,5,6,7,8]
+var sum=arr.reduce(function(a,b){
+    return a+b;
+})
+console.log(sum)
+
+d.Return all the prime numbers in an array
+
+//Anonymous function
+
+var arr=[1,3,4,,6,5,7, 11, 13, 15,16,17, 19,21, 23, 29, 31,43,50];
+var prime=arr.filter
+(function (num,val){
+    for (i=2;i<num;i++){
+        if( num % i === 0)
+        return false;
+    }
+    return num !== 1;
+
+})
+console.log(prime)
+
+e.Return all the palindromes in an array
+
+// IIF - Immediately Invoked Function
+
+( function(text){
+        let task = text.toString().split("").reverse().join("").split(",");
+        let result = text.filter(val=>task.includes(val));
+        let result2 = text.filter(val=>!task.includes(val));
+         console.log("Palindroms in given array ",result);
+         console.log("Non Palindroms in given array ",result2);
+    })(["did","madam","Kamaraj"]);
+
+
+f.Return median of two sorted arrays of the same size
+
+//Anonymous function
+
+function getMedian(ar1, ar2, n)
+{
+    var i = 0; 
+    var j = 0;
+    var count;
+    var m1 = -1, m2 = -1;
+ 
+    
+    for (count = 0; count <= n; count++)
+    {
+        
+        if (i == n)
+        {
+            m1 = m2;
+            m2 = ar2[0];
+            break;
+        }
+ 
+        
+        else if (j == n)
+        {
+            m1 = m2;
+            m2 = ar1[0];
+            break;
+        }
+        
+            
+        if (ar1[i] <= ar2[j])
+        {
+            m1 = m2; 
+            m2 = ar1[i];
+            i++;
+        }
+        else
+        {
+            m1 = m2; 
+            m2 = ar2[j];
+            j++;
+        }
+    }
+ 
+    return (m1 + m2)/2;
+}
+ 
+var ar1 = [1, 12, 15, 26, 38];
+var ar2 = [2, 13, 17, 30, 45];
+var n1 = ar1.length;
+var n2 = ar2.length;
+if (n1 == n2){
+    console.log("Median is "+ getMedian(ar1, ar2, n1));
+}
+
+
+g.Remove duplicates from an array
+
+// IIF - Immediately Invoked Function
+
+var chars = ['balu', 'arun', 'balu', 'mani', 'kumar'];
+
+ var uniqueChars = chars.filter((c, index) => {
+     return chars.indexOf(c) === index;
+ });
+ 
+ console.log(uniqueChars);
+
+h.Rotate an array by k time
+
+//Anonymous function
+
+function arrayRotateOne(arr, n) {
+    for (let i = 0; i < n; i++) {
+      arr.unshift(arr.pop());
+    }
+    return arr;
+  }
+  console.log( arrayRotateOne([1,2,3,4,5,6],3));
+
+
+//Using Arrow Function:-
+
+a.var array=[1,2,3,4,5,6,7,8,9]
+var odd=array.filter((item,value)=>{
+    return (item % 2 !== 0);
+});
+
+console.log(odd);
+
+b.Convert all the strings to title caps in a string array
+
+var name="kamaraj "
+ let titlecpas =(name)=>{
+    var caps=name.charAt(0).toUpperCase() +
+    name.substr(1).toLowerCase();
+    
+    
+    return caps;
+};
+console.log(titlecpas(name))
+
+c.Sum of all numbers in an array
+
+var arr=[1,2,3,4,5,6,7,8];
+var sum=arr.reduce((a,b) =>{
+    return a+b;
+})
+console.log(sum);
+
+d.Return all the prime numbers in an array
+
+var array=[1,3,4,,6,5,7, 11, 13, 15,16,17, 19,21, 23, 29, 31,43,50];
+var prime=array.filter(num=>{
+    for (i=2;i<num;i++){
+        if( num % i === 0)
+        return false;
+    }
+    return num !== 1;
+});
+console.log(prime);
+
+e.Return all the palindromes in an array
+
+var array=["kamaraj","madam","did","mango"];
+
+var palindromes = ()=>{
+    var array2 = array.toString().split("").reverse().join("").split(",")
+    var result  = array2.filter(val=>array.includes(val))
+    console.log(array);
+    console.log(result);
+}
+palindromes();
+
+
+  
+  
+  
+
+
+
+
+
+
+
